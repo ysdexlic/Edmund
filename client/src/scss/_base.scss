@@ -1,0 +1,192 @@
+//@import 'normalize';
+
+/* Fonts
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Open Sans', sans-serif;
+
+}
+/* Defaults
+   ========================================================================== */
+
+html {
+  background-color: $white;
+  @include font-size($base-root-size);
+  line-height: 1.5;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-moz-selection {
+
+  @include selection();
+}
+::selection {
+
+  @include selection();
+}
+::-webkit-input-placeholder {
+
+  @include placeholder();
+}
+::-moz-placeholder {
+
+  @include placeholder();
+}
+:-ms-input-placeholder {
+  @include placeholder();
+
+}
+img.pure-img {
+  vertical-align: middle;
+  max-width: 60%;
+  display: inline;
+
+}
+code {
+  color: $red;
+
+}
+h3 {
+  font-weight: normal;
+  @include font-size(22);
+
+}
+.pure-menu.pure-menu-horizontal {
+  background: $silver;
+
+}
+a {
+  color: $blue;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  //line-height: inherit;
+}
+a:focus,
+a:hover {
+  color: darken($blue, 9);
+
+}
+a.pure-button:focus,
+a.pure-button:hover {
+  color: #fff;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+pre {
+  code {
+    color: $black;
+    background-color: $silver;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray;
+    display: block;
+    padding: 0.5em;
+  }
+
+}
+h4 {
+  @include font-size(21);
+}
+
+.page-footer {
+  line-height: 0;
+  background-color: $black;
+  color: $white;
+  font-size: 10px;
+  li {
+    display:inline-block;
+    padding: 0 2em 0 0;
+  }
+}
+
+.page-footer a {
+  color: $white;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.page-footer a:hover {
+    color: $gray;
+}
+
+.main-content {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  vertical-align: baseline;
+  background-image: url('../assets/images/bg2.jpg');
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  //background: $edmund;
+}
+
+.logo-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url('../assets/images/BetweenWorlds.png');
+  width:100%;
+  height:85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+}
+
+.social-bar {
+  font-size: 3em;
+  bottom: 0;
+  left: 0;
+}
+
+.fa {
+  color: #925d20;
+}
+
+#itunes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 75%;
+  width: 45%;
+  margin: auto;
+  border-radius: 50%;
+  display: inline-block;
+
+}
