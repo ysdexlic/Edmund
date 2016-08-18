@@ -20,9 +20,6 @@
 
   function run($log) {
     $log.debug('App is running!');
-    $(window).on('load', function() {
-      $('#cover').fadeOut(1000);
-    });
 
     $(document).ready(function () {
 

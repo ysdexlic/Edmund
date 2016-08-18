@@ -180,17 +180,6 @@ h4 {
 
 }
 
-#cover
-{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top:0;
-  left: 0;
-  background: #000;
-  z-index:9999;
-}
-
 .kulaNav
 {
   background-color: rgba(0,0,0,0);
@@ -309,7 +298,7 @@ h4 {
   height: 100%;
   min-height: 100%;
   overflow: hidden;
-  background-color: #f68815;
+  background-color: $edmund;
   vertical-align: baseline;
   background-image: url('../images/bg2.jpg');
   background-repeat: no-repeat;
@@ -329,7 +318,7 @@ h4 {
   bottom: 0;
   margin: auto;
   height: 85%;
-  width: 50%;
+  width: 100%;
   background-image: url('../images/BetweenWorlds.png');
   background-repeat: no-repeat;
   background-position: center;
