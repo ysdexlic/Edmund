@@ -4,13 +4,13 @@
   "email": "david.arthur.thompson@gmail.com",
   "url": "http://thebeardydeveloper.com",
   "version": "0.0.1",
-  "homepage": "https://github.com/ysdexlic/angular-boilerplate",
-  "description": "A boilerplate to start angular projects with",
+  "homepage": "https://github.com/ysdexlic/Edmund",
+  "description": "Edmund Jeffery, singer-songwriter",
   "license": "MIT",
-  "bugs": "https://github.com/ysdexlic/angular-boilerplate/issues",
+  "bugs": "https://github.com/ysdexlic/Edmund/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ysdexlic/angular-boilerplate.git"
+    "url": "git@github.com:ysdexlic/Edmund.git"
   },
   "devDependencies": {
     "browser-sync": "~2.7.1",

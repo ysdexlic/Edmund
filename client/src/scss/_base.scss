@@ -9,7 +9,7 @@ input,
 select,
 textarea,
 .pure-g [class *= "pure-u"] {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Amatic SC', cursive;
 
 }
 /* Defaults
@@ -25,6 +25,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: 'Amatic SC', cursive;
 }
 
 body {
@@ -71,16 +72,19 @@ h3 {
 
 }
 a {
-  color: $blue;
+  color: $edmundText;
   text-decoration: none;
   display: flex;
   position: relative;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   //line-height: inherit;
 }
 a:focus,
 a:hover {
-  color: darken($blue, 9);
+  color: darken($edmundText, 15);
+  text-decoration: none;
 
 }
 a.pure-button:focus,
@@ -137,6 +141,7 @@ h4 {
 
 .main-content {
   display: block;
+  position: fixed;
   margin: 0;
   padding: 0;
   border: 0;
@@ -151,30 +156,14 @@ h4 {
   //background: $edmund;
 }
 
-.logo-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background-image: url('../assets/images/BetweenWorlds.png');
-  width:100%;
-  height:85%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-}
 
 .social-bar {
+  position: absolute;
   font-size: 3em;
-  bottom: 0;
+  top: 0;
   left: 0;
-}
-
-.fa {
-  color: #925d20;
+  right: 0;
+  margin: auto;
 }
 
 #itunes {
@@ -189,4 +178,279 @@ h4 {
   border-radius: 50%;
   display: inline-block;
 
+}
+
+#cover
+{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  background: #000;
+  z-index:9999;
+}
+
+.kulaNav
+{
+  background-color: rgba(0,0,0,0);
+  height: 70px;
+}
+
+.navlink
+{
+  font-size: 4em;
+  position: absolute;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.smallPhoneNav .navlink
+{
+  width: 90px;
+  height: 30px;
+}
+
+.smallPhoneNav #livenav
+{
+  width: 90px;
+  height: 40px;
+}
+
+.smallPhoneNav #videonav
+{
+  width: 80px;
+  height: 30px;
+}
+
+#musicnav
+{
+  top: 1.6%;
+  left: 1%;
+}
+
+#livenav
+{
+  bottom: 1%;
+  left: 1%;
+
+}
+
+#videonav
+{
+  bottom: 1%;
+  right: 1%;
+}
+
+#socialiconsholder
+{
+  position: absolute;
+  top: 2%;
+  right: 0.5%;
+}
+
+.socialIcon
+{
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+.smallPhoneIcons .socialIcon
+{
+  width: 30px;
+  height: 30px;
+  /*background-size: 30px;*/
+}
+
+.facebookIcon
+{
+  background-image: url('../assets/icons/fb.png');
+
+}
+
+.twitterIcon
+{
+  background-image: url('../assets/icons/twitter.png');
+}
+
+.emailIcon
+{
+  background-image: url('../assets/icons/mail.png');
+}
+
+.instaIcon
+{
+  background-image: url('../assets/icons/insta.png');
+}
+
+.soundcloudIcon
+{
+  background-image: url('../assets/icons/soundcloud.png');
+}
+
+
+.mainContainer
+{
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #f68815;
+  vertical-align: baseline;
+  background-image: url('../images/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.logoimage
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 85%;
+  width: 50%;
+  background-image: url('../images/BetweenWorlds.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+.logoimage.fullwidth
+{
+  width: 100%;
+}
+
+.logoimage.logooverlay
+{
+  width: 100%;
+  background-image: url('../images/BetweenWorldsLight.png');
+}
+
+
+.menuoverlay
+{
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/bg3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.menufadedata
+{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.menuopen
+{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+}
+
+.menucontentholder
+{
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  /*background-color: black;*/
+  /*background-color: #f68815;*/
+}
+
+.menucontent
+{
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 75%;
+  width: 75%;
+  overflow: hidden;
+  /*background-color: black;*/
+  /*background-color: #f68815;*/
+}
+
+.songkick-widget
+{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.smallphonewidget.songkick-widget
+{
+  height: 900px;
+  position: static;
+}
+
+.iframewidget
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.menuclosebtn
+{
+  color: white;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  height: 5%;
+  width: 5%;
+  background-image: url('../icons/cross.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
 }

@@ -12,12 +12,7 @@
         views: {
           '@': {
             templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
+            controller: 'HomeCtrl as home'
           }
         }
       });
@@ -27,9 +22,9 @@
    * @name  HomeCtrl
    * @description Controller
    */
-  function HomeCtrl(data) {
+  function HomeCtrl() {
     var home = this;
-    home.data = data.data;
+    home.stuff = 'stuff';
   }
 
   angular.module('home', [])
