@@ -78,7 +78,6 @@ a {
   position: relative;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
-  z-index: 99;
   //line-height: inherit;
 }
 a:hover {
@@ -159,6 +158,7 @@ h4 {
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 999;
 }
 
 #mainNav {
@@ -167,6 +167,7 @@ h4 {
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 999;
 }
 
 .navlink
@@ -244,7 +245,6 @@ h4 {
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
-  z-index: 0;
 }
 
 .logoimage.fullwidth
@@ -296,6 +296,7 @@ h4 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  z-index: 100;
 }
 
 .menufadedata
@@ -354,6 +355,7 @@ h4 {
   width: 100%;
   height: 100%;
   border: none;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .smallphonewidget.songkick-widget
@@ -370,6 +372,9 @@ h4 {
   top: 0;
   bottom: 0;
   margin: auto;
+  #document html{
+    overflow: auto;
+  }
 }
 
 
