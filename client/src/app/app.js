@@ -80,35 +80,72 @@
         {
           case 'home':
 
-            var hesGirl = addElement('div', 'logoimage', $('#mainContent'));
+            var edmund = addElement('a', 'logoimage', $('#mainContent'));
+            var available = addElement('a', 'available hidden', $('#mainContent'));
+            //edmund.href='#';
 
             var menuOverlay = addElement('div', 'menuoverlay menufadedata', $('#mainContent'));
+            var closer = addElement('a', 'closeable', menuOverlay);
             var menuOverlayLogo = addElement('div', 'logoimage logooverlay', menuOverlay);
 
             var menuContentHolder = addElement('div', 'menucontentholder centertext', menuOverlayLogo);
-            var closeButton = addElement('a', 'menuclosebtn', menuContentHolder);
-            closeButton.href='#';
+            //closer.href='#';
             var menuContent = addElement('div', 'menucontent', menuContentHolder);
+
+            $(edmund).click(function () {
+              $(edmund).addClass('hidden');
+              $(available).removeClass('hidden');
+
+            });
+
+            $(available).click(function() {
+              $(available).addClass('hidden');
+              $(edmund).removeClass('hidden');
+
+            });
 
             $('#musicnav').click(function ()
             {
+              $(available).addClass('hidden');
               $(menuOverlay).addClass ('menuopen');
+              $('#livenav').removeClass('selected');
+              $('#videonav').removeClass('selected');
+              $('#musicnav').addClass('selected');
+              $('a').removeClass('darkerColor');
+              $('a').addClass('lighterColor');
               fillMenu('music', menuContent);
             });
             $('#livenav').click(function ()
             {
+              $(available).addClass('hidden');
               $(menuOverlay).addClass ('menuopen');
+              $('#musicnav').removeClass('selected');
+              $('#videonav').removeClass('selected');
+              $('#livenav').addClass('selected');
+              $('a').removeClass('darkerColor');
+              $('a').addClass('lighterColor');
               fillMenu('live', menuContent);
             });
             $('#videonav').click(function ()
             {
+              $(available).addClass('hidden');
               $(menuOverlay).addClass ('menuopen');
+              $('#livenav').removeClass('selected');
+              $('#musicnav').removeClass('selected');
+              $('#videonav').addClass('selected');
+              $('a').removeClass('darkerColor');
+              $('a').addClass('lighterColor');
               fillMenu('video', menuContent);
             });
 
-            $(closeButton).click(function ()
+            $(closer).click(function ()
             {
+              $(available).addClass('hidden');
+              $(edmund).removeClass('hidden');
               $(menuOverlay).removeClass ('menuopen');
+              $('a').removeClass('selected');
+              $('a').removeClass('lighterColor');
+              $('a').addClass('darkerColor');
               $(menuContent).empty();
             });
 

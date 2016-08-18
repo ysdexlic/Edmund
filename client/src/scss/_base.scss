@@ -76,21 +76,29 @@ a {
   text-decoration: none;
   display: flex;
   position: relative;
-  z-index: 1;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
+  z-index: 99;
   //line-height: inherit;
 }
-a:focus,
 a:hover {
   color: darken($edmundText, 15);
   text-decoration: none;
-
 }
-a.pure-button:focus,
-a.pure-button:hover {
-  color: #fff;
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 
+a.selected {
+  color: $white;
+}
+
+a.lighterColor:hover {
+  color: darken($edmundLightText, 20);
+}
+a.selected:hover {
+  color: darken($white, 10);
 }
 
 ul {
@@ -118,25 +126,12 @@ h4 {
   @include font-size(21);
 }
 
-.page-footer {
-  line-height: 0;
-  background-color: $black;
-  color: $white;
-  font-size: 10px;
-  li {
-    display:inline-block;
-    padding: 0 2em 0 0;
-  }
+.lighterColor {
+  color: $edmundLightText;
 }
 
-.page-footer a {
-  color: $white;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-
-.page-footer a:hover {
-    color: $gray;
+.darkerColor {
+  color: $edmundText;
 }
 
 .main-content {
@@ -160,42 +155,27 @@ h4 {
 .social-bar {
   position: absolute;
   font-size: 3em;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-#itunes {
+#mainNav {
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
-  height: 75%;
-  width: 45%;
+  right: 0;
   margin: auto;
-  border-radius: 50%;
-  display: inline-block;
-
-}
-
-.kulaNav
-{
-  background-color: rgba(0,0,0,0);
-  height: 70px;
 }
 
 .navlink
 {
   font-size: 4em;
-  position: absolute;
+  position: relative;
   background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  display: block;
-  background-repeat: no-repeat;
+  display: inline-block;
+  padding: 0 0.2em 0 0.2em;
 }
 
 .smallPhoneNav .navlink
@@ -216,75 +196,13 @@ h4 {
   height: 30px;
 }
 
-#musicnav
-{
-  top: 1.6%;
-  left: 1%;
-}
 
-#livenav
-{
-  bottom: 1%;
-  left: 1%;
-
-}
-
-#videonav
-{
-  bottom: 1%;
-  right: 1%;
-}
-
-#socialiconsholder
-{
-  position: absolute;
-  top: 2%;
-  right: 0.5%;
-}
-
-.socialIcon
-{
-  display: inline-block;
-  width: 45px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-}
 
 .smallPhoneIcons .socialIcon
 {
   width: 30px;
   height: 30px;
   /*background-size: 30px;*/
-}
-
-.facebookIcon
-{
-  background-image: url('../assets/icons/fb.png');
-
-}
-
-.twitterIcon
-{
-  background-image: url('../assets/icons/twitter.png');
-}
-
-.emailIcon
-{
-  background-image: url('../assets/icons/mail.png');
-}
-
-.instaIcon
-{
-  background-image: url('../assets/icons/insta.png');
-}
-
-.soundcloudIcon
-{
-  background-image: url('../assets/icons/soundcloud.png');
 }
 
 
@@ -300,7 +218,7 @@ h4 {
   overflow: hidden;
   background-color: $edmund;
   vertical-align: baseline;
-  background-image: url('../images/bg2.jpg');
+  background-image: url('../assets/images/bg2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -319,13 +237,14 @@ h4 {
   margin: auto;
   height: 85%;
   width: 100%;
-  background-image: url('../images/BetweenWorlds.png');
+  background-image: url('../assets/images/BetweenWorlds.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
+  z-index: 0;
 }
 
 .logoimage.fullwidth
@@ -336,7 +255,27 @@ h4 {
 .logoimage.logooverlay
 {
   width: 100%;
-  background-image: url('../images/BetweenWorldsLight.png');
+  background-image: url('../assets/images/BetweenWorldsLight.png');
+}
+
+.available
+{
+  position: absolute;
+  left: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50%;
+  width: 100%;
+  background-image: url('../assets/images/available.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  z-index: 1;
 }
 
 
@@ -349,7 +288,8 @@ h4 {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-image: url('../images/bg3.jpg');
+  background-color: $edmundBackgroundBlue;
+  background-image: url('../assets/images/bg3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -372,6 +312,9 @@ h4 {
   visibility: visible;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
+  > a {
+    color: #ffdd97;
+  }
 }
 
 .menucontentholder
@@ -401,6 +344,7 @@ h4 {
   height: 75%;
   width: 75%;
   overflow: hidden;
+  z-index: 100;
   /*background-color: black;*/
   /*background-color: #f68815;*/
 }
@@ -427,19 +371,14 @@ h4 {
   bottom: 0;
   margin: auto;
 }
-.menuclosebtn
-{
-  color: white;
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  height: 5%;
-  width: 5%;
-  background-image: url('../icons/cross.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
+
+
+.closeable {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.closeable:hover {
+  cursor: default;
 }

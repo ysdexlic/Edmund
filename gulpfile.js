@@ -97,7 +97,7 @@ gulp.task('html', function() {
     .pipe($.sourcemaps.init())
     .pipe($.if('**/*main.js', $.ngAnnotate()))
     .pipe($.if('*.js', $.uglify({
-      mangle: false,
+      mangle: false
     })))
     .pipe($.if('*.css', $.csso()))
     .pipe($.if(['**/*main.js', '**/*main.css'], $.header(config.banner, {
