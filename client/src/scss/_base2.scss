@@ -1,0 +1,389 @@
+//@import 'normalize';
+
+/* Fonts
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Amatic SC', cursive;
+
+}
+/* Defaults
+   ========================================================================== */
+
+html {
+  background-color: $edmund;
+  @include font-size($base-root-size);
+  line-height: 1.5;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-moz-selection {
+
+  @include selection();
+}
+::selection {
+
+  @include selection();
+}
+::-webkit-input-placeholder {
+
+  @include placeholder();
+}
+::-moz-placeholder {
+
+  @include placeholder();
+}
+:-ms-input-placeholder {
+  @include placeholder();
+
+}
+img.pure-img {
+  vertical-align: middle;
+  max-width: 60%;
+  display: inline;
+
+}
+code {
+  color: $red;
+
+}
+h3 {
+  font-weight: normal;
+  @include font-size(22);
+
+}
+.pure-menu.pure-menu-horizontal {
+  background: $silver;
+
+}
+a {
+  color: $edmundText;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  //line-height: inherit;
+}
+a:hover {
+  color: darken($edmundText, 15);
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.selected {
+  color: $white;
+}
+
+a.lighterColor:hover {
+  color: darken($edmundLightText, 20);
+}
+a.selected:hover {
+  color: darken($white, 10);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+pre {
+  code {
+    color: $black;
+    background-color: $silver;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray;
+    display: block;
+    padding: 0.5em;
+  }
+
+}
+h4 {
+  @include font-size(21);
+}
+
+.lighterColor {
+  color: $edmundLightText;
+}
+
+.darkerColor {
+  color: $edmundText;
+}
+
+.main-content {
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  vertical-align: baseline;
+  background-image: url('../assets/images/bg2.jpg');
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  //background: $edmund;
+}
+
+
+.social-bar {
+  position: absolute;
+  font-size: 3em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+}
+
+#mainNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+}
+
+.navlink
+{
+  font-size: 4em;
+  position: relative;
+  background-size: contain;
+  display: inline-block;
+  padding: 0 0.2em 0 0.2em;
+}
+
+.smallPhoneNav .navlink
+{
+  width: 90px;
+  height: 30px;
+}
+
+.smallPhoneNav #livenav
+{
+  width: 90px;
+  height: 40px;
+}
+
+.smallPhoneNav #videonav
+{
+  width: 80px;
+  height: 30px;
+}
+
+
+
+.smallPhoneIcons .socialIcon
+{
+  width: 30px;
+  height: 30px;
+  /*background-size: 30px;*/
+}
+
+
+.mainContainer
+{
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: $edmund;
+  vertical-align: baseline;
+  background-image: url('../assets/images/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.logoimage
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 85%;
+  width: 100%;
+  background-image: url('../assets/images/BetweenWorlds.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+.logoimage.fullwidth
+{
+  width: 100%;
+}
+
+.logoimage.logooverlay
+{
+  width: 100%;
+  background-image: url('../assets/images/BetweenWorldsLight.png');
+}
+
+.available
+{
+  position: absolute;
+  left: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60%;
+  width: 80%;
+  background-image: url('../assets/images/available.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  z-index: 1;
+}
+
+
+.menuoverlay
+{
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $edmundBackgroundBlue;
+  background-image: url('../assets/images/bg3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  z-index: 100;
+}
+
+.menufadedata
+{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.menuopen
+{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  > a {
+    color: #ffdd97;
+  }
+}
+
+.menucontentholder
+{
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  /*background-color: black;*/
+  /*background-color: #f68815;*/
+}
+
+.menucontent
+{
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 75%;
+  width: 75%;
+  overflow: hidden;
+  z-index: 100;
+  /*background-color: black;*/
+  /*background-color: #f68815;*/
+}
+
+.songkick-widget
+{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.smallphonewidget.songkick-widget
+{
+  height: 900px;
+  position: static;
+}
+
+.iframewidget
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  #document html{
+    overflow: auto;
+  }
+}
+
+
+.closeable {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.closeable:hover {
+  cursor: default;
+}

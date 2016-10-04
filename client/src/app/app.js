@@ -5,13 +5,16 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
     $stateProvider
       .state('root', {
       });
+    if(window.history && window.history.pushState){
+      $locationProvider.html5Mode(true);
+    }
   }
 
   function MainCtrl($log) {
